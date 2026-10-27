@@ -3,8 +3,8 @@ INSERT INTO country (
     description,
     create_date,
     create_user,
-    update_date,
-    update_user,
+    modify_date,
+    modify_user,
     version
 )
 VALUES
@@ -259,16 +259,16 @@ VALUES
 ('ZW', 'Zimbabwe', CURRENT_TIMESTAMP, 'JSUBIRA', CURRENT_TIMESTAMP, 'JSUBIRA', 0);
 
 --administrative_division_type--
-INSERT INTO administrative_division_type (code, description, country_id, create_Date, create_user, update_date,update_user, version)
+INSERT INTO administrative_division_type (code, description, country_id, create_Date, create_user, modify_date,modify_user, version)
 VALUES('DP_PE', 'DEPARTMENT', 174, CURRENT_TIMESTAMP, 'JSUBIRA', CURRENT_TIMESTAMP, 'JSUBIRA', 0);
 
-INSERT INTO administrative_division_type (code, description, country_id, create_Date, create_user, update_date,update_user, version)
+INSERT INTO administrative_division_type (code, description, country_id, create_Date, create_user, modify_date,modify_user, version)
 VALUES('PV_PE', 'PROVINCE', 174, CURRENT_TIMESTAMP, 'JSUBIRA', CURRENT_TIMESTAMP, 'JSUBIRA', 0);
 
-INSERT INTO administrative_division_type (code, description, country_id, create_Date, create_user, update_date,update_user, version)
+INSERT INTO administrative_division_type (code, description, country_id, create_Date, create_user, modify_date,modify_user, version)
 VALUES('DT_PE', 'DISTRICT', 174, CURRENT_TIMESTAMP, 'JSUBIRA', CURRENT_TIMESTAMP, 'JSUBIRA', 0);
 
-INSERT INTO administrative_division_type (code, description, country_id, create_Date, create_user, update_date,update_user, version)
+INSERT INTO administrative_division_type (code, description, country_id, create_Date, create_user, modify_date,modify_user, version)
 VALUES('CI_PE', 'CITY', 174,  CURRENT_TIMESTAMP, 'JSUBIRA', CURRENT_TIMESTAMP, 'JSUBIRA', 0);
 
 --administrative_division--
@@ -281,8 +281,8 @@ INSERT INTO administrative_division (
     description,
     create_date,
     create_user,
-    update_date,
-    update_user,
+    modify_date,
+    modify_user,
     version
 )
 VALUES
@@ -321,8 +321,8 @@ INSERT INTO administrative_division (
     description,
     create_date,
     create_user,
-    update_date,
-    update_user,
+    modify_date,
+    modify_user,
     version
 )
 VALUES
@@ -532,8 +532,8 @@ VALUES
 		description,
 		create_date,
 		create_user,
-		update_date,
-		update_user,
+		modify_date,
+		modify_user,
 		version
 	)
 	VALUES

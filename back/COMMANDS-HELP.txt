@@ -4,3 +4,4 @@ docker compose --profile apps up --build -d : 	Construye la imagen y levanta Pos
 docker compose logs -f customer-service : Muestra los logs (verás a Flyway aplicando la migración)
 docker compose --profile apps down : Detiene y elimina los contenedores, conservando los datos
 docker compose up -d : Solo PostgreSQL, para trabajar con bootRun
+..\gradlew.bat -p .. :customer-service:bootRun -> arrancar solo un servicio

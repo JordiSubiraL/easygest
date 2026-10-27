@@ -19,5 +19,24 @@ spring:
     password: customer_pass
     validate-migration-naming: true
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Dev
+      client:
+        registration:
+          keycloak-admin:
+            provider: keycloak
+            client-id: spring-client
+            client-secret: p27AnlaFpNjaz4hlFKiRxO4QPPpWnZmCqiYo3xLRStkzZjzUwlkspR2jfSyCmTTHVo6zY4aWxLryldYbV4jkRs
+            authorization-grant-type: client_credentials
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/Dev
+  logging:
+    level:
+      org.keycloak: DEBUG
+
 server:
    port: 8081

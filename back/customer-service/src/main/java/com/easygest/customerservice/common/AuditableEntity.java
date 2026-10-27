@@ -4,17 +4,17 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public abstract class AuditableEntity{
+public abstract class AuditableEntity {
 
     @CreatedDate
-    private Timestamp createDate;
+    private LocalDateTime createDate;
 
     @LastModifiedDate
-    private Timestamp modifyDate;
+    private LocalDateTime modifyDate;
 
     @CreatedBy
     private String createUser;
@@ -23,5 +23,13 @@ public abstract class AuditableEntity{
     private String modifyUser;
 
     @Version
-    private Integer version;
+    private Long version = 0L;
+
+    public void copyAuditingFrom(AuditableEntity source) {
+        this.createDate = source.createDate;
+        this.createUser = source.createUser;
+        this.modifyDate = source.modifyDate;
+        this.modifyUser = source.modifyUser;
+        this.version = source.version;
+    }
 }
